@@ -1,7 +1,7 @@
 <template>
   <div>
     <button><router-link to="/">Back</router-link></button>
-    <h2>Control your plans</h2>
+    <h2>Manage your plans</h2>
     <AddTodo @add-todo="addTodo" />
     <select v-model="filter">
       <option value="all">All</option>
