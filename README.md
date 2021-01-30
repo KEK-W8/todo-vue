@@ -1,19 +1,9 @@
-# app
+# todo-vue
 
-## Project setup
-```
-npm install
-```
+Приложение, написанное с целью закрепления навыков по Vue.js.
 
-### Compiles and hot-reloads for development
+### ЗАПУСК ОСУЩЕСТВЛЯЕТСЯ КОМАНДОЙ
+
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
