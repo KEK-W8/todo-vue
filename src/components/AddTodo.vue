@@ -1,7 +1,7 @@
 <template>
   <form @submit.prevent="onSubmit">
     <input type="text" v-model="title" />
-    <button type="submit">Create</button>
+    <button type="submit">Add</button>
   </form>
 </template>
 

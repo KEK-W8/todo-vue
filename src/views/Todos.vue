@@ -14,7 +14,7 @@
       v-bind:todos="filteredTodos"
       @remove-todo="removeTodo"
     />
-    <h4 v-else>No todos!</h4>
+    <h4 v-else>No todos here!</h4>
   </div>
 </template>
 
