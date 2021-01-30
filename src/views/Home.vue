@@ -13,8 +13,19 @@
 a {
   text-decoration: none;
 }
-
+a:visited {
+  color: black;
+}
 button {
+  height: 1.75rem;
+  border-radius: 6px;
   font-weight: bold;
+  background-color: white;
+  border: 1px solid #ccc;
+}
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  background-color: whitesmoke;
 }
 </style>

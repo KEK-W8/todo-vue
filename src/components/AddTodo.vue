@@ -38,6 +38,7 @@ form {
 
 input {
   width: 40vw;
+  height: 1.5rem;
   border-radius: 6px;
   border: 1px solid #ccc;
   outline: none;
@@ -50,6 +51,7 @@ input:hover {
 }
 
 button[type="submit"] {
+  height: 1.74rem;
   border-radius: 6px;
   font-weight: bold;
   margin-left: 0.3rem;

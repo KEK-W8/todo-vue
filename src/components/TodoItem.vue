@@ -39,13 +39,15 @@ li {
 .rm {
   background: red;
   color: #fff;
-  border-radius: 10px;
+  border-radius: 6px;
   font-weight: bold;
+  border: 1px solid whitesmoke;
 }
 
 .rm:hover {
   cursor: pointer;
   opacity: 0.8;
+  background-color: darkred;
 }
 
 .done {
@@ -59,5 +61,6 @@ input {
 input:hover {
   cursor: pointer;
   opacity: 0.8;
+  background-color: grey;
 }
 </style>

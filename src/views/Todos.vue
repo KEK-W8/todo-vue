@@ -14,7 +14,7 @@
       v-bind:todos="filteredTodos"
       @remove-todo="removeTodo"
     />
-    <h4 v-else>Add something!</h4>
+    <h4 v-else>No todos!</h4>
   </div>
 </template>
 
@@ -52,15 +52,6 @@ export default {
   },
   computed: {
     filteredTodos() {
-      // if (this.filter === "all") {
-      //   return this.todos;
-      // }
-      // if (this.filter === "completed") {
-      //   return this.todos.filter((t) => t.completed);
-      // }
-      // if (this.filter === "active") {
-      //   return this.todos.filter((t) => !t.completed);
-      // }
       switch (this.filter) {
         case "all":
           return this.todos;
@@ -68,7 +59,7 @@ export default {
         case "completed":
           return this.todos.filter((t) => t.completed);
           break;
-        case "completed":
+        case "active":
           return this.todos.filter((t) => !t.completed);
           break;
       }
@@ -89,11 +80,13 @@ export default {
 a {
   text-decoration: none;
 }
-
+a:visited {
+  color: black;
+}
 button {
+  height: 1rem;
   border-radius: 6px;
   font-weight: bold;
-  margin-left: 0.3rem;
   background-color: white;
   border: 1px solid #ccc;
 }
