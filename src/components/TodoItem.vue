@@ -9,7 +9,7 @@
       <strong>{{ index + 1 }}</strong>
       {{ todo.title | uppercase }}
     </span>
-    <button class="rm" v-on:click="$emit('remove-todo', todo.id)">
+    <button class="rm" @click="$emit('remove-todo', todo.id)">
       &times;
     </button>
   </li>

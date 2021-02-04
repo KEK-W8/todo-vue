@@ -1,6 +1,5 @@
 <template>
   <div>
-    <button><router-link to="/">Back</router-link></button>
     <h2>Manage your plans</h2>
     <AddTodo @add-todo="addTodo" />
     <select v-model="filter">
@@ -21,17 +20,17 @@
 <script>
 import TodoList from "@/components/TodoList";
 import AddTodo from "@/components/AddTodo";
-import Loader from "@/components/Loader";
+import Loader from "@/assets/effects/Loader";
 export default {
   name: "App",
   data() {
     return {
       todos: [
-        // { id: 1, title: "Выучить 10 слов", completed: false },
-        // { id: 2, title: "Купить биткоин", completed: false },
-        // { id: 3, title: "Погулять с собакой", completed: false },
+        { id: 1, title: "Выучить 10 слов", completed: false },
+        { id: 2, title: "Купить биткоин", completed: false },
+        { id: 3, title: "Погулять с собакой", completed: false },
       ],
-      loading: true,
+      loading: false,
       filter: "all",
     };
   },
@@ -40,16 +39,16 @@ export default {
     AddTodo,
     Loader,
   },
-  mounted() {
-    fetch("https://jsonplaceholder.typicode.com/todos?_limit=3")
-      .then((response) => response.json())
-      .then((json) => {
-        // setTimeout(() => {
-        this.todos = json;
-        this.loading = false;
-        // }, 1500);
-      });
-  },
+  // mounted() {
+  //   fetch("https://jsonplaceholder.typicode.com/todos?_limit=3")
+  //     .then((response) => response.json())
+  //     .then((json) => {
+  //       // setTimeout(() => {
+  //       this.todos = json;
+  //       this.loading = false;
+  //       // }, 1500);
+  //     });
+  // },
   computed: {
     filteredTodos() {
       switch (this.filter) {
@@ -77,11 +76,9 @@ export default {
 </script>
 
 <style scoped>
-a {
-  text-decoration: none;
-}
-a:visited {
-  color: black;
+h2 {
+  display: flex;
+  justify-content: center;
 }
 button {
   height: 1rem;
@@ -97,7 +94,5 @@ button:hover {
 }
 select {
   margin-bottom: 1rem;
-  position: relative;
-  left: 40%;
 }
 </style>
