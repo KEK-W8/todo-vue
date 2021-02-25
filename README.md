@@ -1,3 +1,10 @@
 ## vue-todo
 
-Приложение, написанное с целью закрепления навыков по Vue.js.
+### Project setup
+```
+npm install
+```
+### Quick start
+```
+npm start
+```
