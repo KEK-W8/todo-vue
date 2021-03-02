@@ -22,7 +22,7 @@ import TodoList from "@/components/TodoList";
 import AddTodo from "@/components/AddTodo";
 import Loader from "@/assets/effects/Loader";
 export default {
-  name: "App",
+  name: "List",
   data() {
     return {
       todos: [
@@ -70,6 +70,10 @@ export default {
     },
     addTodo(todo) {
       this.todos.push(todo);
+    },
+    addToArchive(id) {
+      this.todos = this.todos.filter((t) => t.id !== id);
+      this.archived.push(id);
     },
   },
 };

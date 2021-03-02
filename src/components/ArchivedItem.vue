@@ -1,19 +1,10 @@
 <template>
   <li>
-    <span v-bind:class="{ done: todo.completed }">
-      <input
-        type="checkbox"
-        @change="changeStatus"
-        v-bind:class="{ done: todo.completed }"
-      />
-      <strong>{{ index + 1 }}</strong>
+    <span>
       {{ todo.title | uppercase }}
     </span>
     <button class="archive">
       Archive
-    </button>
-    <button class="rm" @click="$emit('remove-todo', todo.id)">
-      &times;
     </button>
   </li>
 </template>
