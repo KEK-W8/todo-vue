@@ -9,9 +9,6 @@
       <strong>{{ index + 1 }}</strong>
       {{ todo.title | uppercase }}
     </span>
-    <button class="archive">
-      Archive
-    </button>
     <button class="rm" @click="$emit('remove-todo', todo.id)">
       &times;
     </button>
@@ -49,17 +46,13 @@ li {
   margin-bottom: 1rem;
 }
 
-.archive {
-  margin-left: auto;
-}
-
 .rm {
   background: red;
   color: #fff;
   border-radius: 6px;
   font-weight: bold;
   border: 1px solid whitesmoke;
-  margin-left: 7px;
+  margin-left: auto;
 }
 
 .rm:hover {
